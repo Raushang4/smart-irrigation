@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('static/login.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 140px 70px;
+            border-radius: 20px;
+        }
+        .container {
+            text-align: center;
+            padding: 100px 0;
+            color: white; 
+            position: relative;
+        }
+        .heading {
+            font-size: 4rem; 
+            font-weight: bold; 
+            color: white; 
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+            padding: 10px 50px;
+            width: 50%;
+        }
+
+        /* tablet and phone views */
+        @media (max-width: 768px) {
+            .heading {
+                font-size: 2rem; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay d-flex flex-column"> 
+            <div>
+                <h1 class="display-4 heading text-uppercase" >agriwave Irrigation system</h1>
+            </div>
+            <div class="my-4">
+                <a href="{{ url_for('login') }}" class="btn btn-lg " style="background-color: green; color:white;">Login</a>
+            </div>
+            <div>
+                <a href="{{ url_for('register') }}" class="btn btn-secondary btn-lg">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
